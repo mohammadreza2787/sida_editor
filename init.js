@@ -1,6 +1,6 @@
 // initialize.js
 (function() {
-    var basePath = 'https://mohammadreza2787.github.io/sida-editor/';
+    var basePath = 'https://mohammadreza2787.github.io/sida_editor/';
     var scripts = [
         'core.js',
         'daftarNatayej.js',
