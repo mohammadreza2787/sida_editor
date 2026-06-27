@@ -22,7 +22,7 @@
 
     function ensureSpacersExist() {
         if (document.querySelector('.custom-spacer-top')) return;
-        var allCards = document.querySelectorAll('.container > .ng-scope[ng-repeat="rowItem in model.ksarnamehs"]');
+        var allCards = document.querySelectorAll('.container > .ng-scope[ng-repeat="rowItem in dataItems"]');
         var evenCards = Array.from(allCards).filter(function(card, index) { return index % 2 === 0; });
         evenCards.forEach(function(card) {
             var topSpacer = document.createElement('div'); topSpacer.className = 'custom-spacer custom-spacer-top'; topSpacer.style.height = '0px';
@@ -48,7 +48,7 @@
     }
 
     function adjustRightMargin(amount) {
-        var blocks = document.querySelectorAll('.ng-scope[ng-repeat="rowItem in model.ksarnamehs"]');
+        var blocks = document.querySelectorAll('.ng-scope[ng-repeat="rowItem in dataItems"]');
         var newVal = 0;
         blocks.forEach(function(block) {
             var cur = parseInt(window.getComputedStyle(block).marginRight) || 0;
@@ -62,7 +62,7 @@
 
     // تنظیم پهنا (width) و بازنشانی max-width
     function adjustWidth(amount) {
-        var blocks = document.querySelectorAll('.ng-scope[ng-repeat="rowItem in model.ksarnamehs"]');
+        var blocks = document.querySelectorAll('.ng-scope[ng-repeat="rowItem in dataItems"]');
         var newVal = lastWidth;
         blocks.forEach(function(block) {
             var cur = parseInt(window.getComputedStyle(block).width) || lastWidth;
@@ -83,7 +83,7 @@
         ensureSpacersExist();
         document.querySelectorAll('.custom-spacer-top').forEach(function(s) { s.style.height = lastTop + 'px'; });
         document.querySelectorAll('.custom-spacer-bottom').forEach(function(s) { s.style.height = lastBottom + 'px'; });
-        document.querySelectorAll('.ng-scope[ng-repeat="rowItem in model.ksarnamehs"]').forEach(function(card) {
+        document.querySelectorAll('.ng-scope[ng-repeat="rowItem in dataItems"]').forEach(function(card) {
             card.style.setProperty('margin-right', lastRight + 'px', 'important');
             card.style.setProperty('width', lastWidth + 'px', 'important');
             card.style.setProperty('max-width', lastWidth + 'px', 'important');
@@ -95,7 +95,7 @@
 
     initStoredValues();
 
-    window.registerSection('daftsrNatayej', {
+    window.registerSection('gozaresh', {
         spacing: {
             // بالا
             increaseTop: function(d) { ensureSpacersExist(); adjustSpacing('.custom-spacer-top', 1, d.topHeight); },
