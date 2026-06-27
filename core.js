@@ -9,13 +9,13 @@
 
     function identifyBlock() {
         var selectors = [
-            { sel: '.container > .ng-scope', name: 'daftsrNatayej' },
+            { sel: '.container > .ng-scope', name: 'daftarNatayej' },
             { sel: '.modal-body.main > .col-md-12.p-0.m-0.panel-body-print', name: 'sarbarg', extra: function(el) { return !el.querySelector('table.table.table-bordered.table-striped'); } },
             { sel: '#panel-print-rokesh > .col-md-12.p-0.m-0.panel-body-print.main', name: 'rookeshKoli' },
             { sel: '.col-md-12.panel-body-print > .ng-scope[ng-repeat="items in item"]', name: 'rookeshPayeei' },
             { sel: '.modal-body.main#print-content > .col-md-12.main.panel-body-print', name: 'polomp' },
             { sel: '.modal-body.main#print-content > .col-md-12.p-0.m-0.panel-body-print.panel-total-row > table.table.table-bordered.table-striped', name: 'amarKoli' },
-            { sel: '.container > .ng-scope', name: 'dataItems' }
+            { sel: '.container > .ng-scope', name: 'gozaresh' }
         ];
         for (var i = 0; i < selectors.length; i++) {
             var el = document.querySelector(selectors[i].sel);
