@@ -7,7 +7,8 @@
         'sarbarg.js',
         'rookeshKoli.js',
         'rookeshPayeei.js',
-        'amarKoli.js'
+        'amarKoli.js',
+        'gozaresh.js'
     ];
 
     function loadScript(src) {
