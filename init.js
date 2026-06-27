@@ -7,7 +7,6 @@
         'sarbarg.js',
         'rookeshKoli.js',
         'rookeshPayeei.js',
-        'polomp.js',
         'amarKoli.js'
     ];
 
